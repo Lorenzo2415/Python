@@ -1,0 +1,49 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="curriculo">
+        <h1 style="color: red;">LORENZO COSTA SANTANA</h1>
+        <div id="competencias">
+            <div style="font-size: 15px; padding: 5px;"><h1>competencias</h1></div>
+            <div>
+                <div style="font-size: 10px; padding:    ;"><h1>mestre das seguintes linguagens de programacao:</h1></div>
+                <p>Python</p>
+                <p>Dart</p>
+                <p>Flutter</p>
+                <p>Kotlin</p>
+                <p>Swift</p>
+                <p>C#</p>
+                <p>MySql</p>
+            </div>
+            <div>
+                <div style="font-size: 10px; padding: 10px;"><h1>Linguas</h1></div>
+                <div>
+                    <p>portugues fluente</p>
+                    <p>ingles fluente</p>
+                    <p>espanhol fluente</p>
+                    <p>frances fluente</p>
+                    <p>italiano fluente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>"""
+
+@app.route("/hello")
+def hello():
+    return 'Hello World'
+
+if __name__ == '__main__':
+    app.run(debug=True)
